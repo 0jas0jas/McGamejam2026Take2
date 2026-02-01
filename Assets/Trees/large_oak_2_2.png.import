@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cio3u326nvnqn"
+uid="uid://b7t1dyvey6av8"
 path.s3tc="res://.godot/imported/large_oak_2_2.png-692697601fd09c275863cf86a30dbe89.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "44feeeede30c9c3ae34c22f1d7fbde75"
 }
 
 [deps]

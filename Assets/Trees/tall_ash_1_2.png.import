@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7s567hdqr6jh"
+uid="uid://dwkr57lcw5em4"
 path.s3tc="res://.godot/imported/tall_ash_1_2.png-f65db22c98eab7a986a701c13489ee1d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "44feeeede30c9c3ae34c22f1d7fbde75"
 }
 
 [deps]

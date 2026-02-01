@@ -2,29 +2,28 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ky0d4mttckvu"
-path.s3tc="res://.godot/imported/grass_normal_roughness.png-3796a06ac5403ba7f66b5728f8bc35b8.s3tc.ctex"
+uid="uid://bpw0rc11xftf0"
+path="res://.godot/imported/grass_normal_roughness.png-3796a06ac5403ba7f66b5728f8bc35b8.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Textures/grass_normal_roughness.png"
-dest_files=["res://.godot/imported/grass_normal_roughness.png-3796a06ac5403ba7f66b5728f8bc35b8.s3tc.ctex"]
+dest_files=["res://.godot/imported/grass_normal_roughness.png-3796a06ac5403ba7f66b5728f8bc35b8.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=2
+compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

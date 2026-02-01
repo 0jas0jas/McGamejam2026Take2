@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuvlrqpbpmqpb"
+uid="uid://co0w4q5cgygvc"
 path.s3tc="res://.godot/imported/tall_oak_2_4.png-80eb2728fac63cd4056aa5ed7fa1d8db.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "c69a21dbef00feda64090bc434cdb08f"
 }
 
 [deps]
