@@ -1,8 +1,25 @@
 [gd_scene format=3 uid="uid://dxwnu1wd8je8s"]
 
-[ext_resource type="PackedScene" uid="uid://dheiwcfoujdsb" path="res://Assets/4_sided_dice.glb" id="1_jfeu1"]
+[ext_resource type="Script" uid="uid://jbpxwabywar" path="res://Scripts/die.gd" id="1_cv3b7"]
+[ext_resource type="PackedScene" uid="uid://dheiwcfoujdsb" path="res://Assets/dice/4_sided_dice.glb" id="1_jfeu1"]
+[ext_resource type="PackedScene" uid="uid://cxuav106klgx1" path="res://Scenes/die_raycast.tscn" id="3_231m4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_231m4"]
+size = Vector3(1, 1, 0.001)
 
 [node name="Die" type="RigidBody3D" unique_id=764338624]
+gravity_scale = 2.0
+freeze = true
+script = ExtResource("1_cv3b7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=507790318]
+transform = Transform3D(16.87988, 0, 0, 0, 11.955593, 0, 0, 0, 13152.985, 0, 0, 0)
+shape = SubResource("BoxShape3D_231m4")
 
 [node name="Sketchfab_Scene" parent="." unique_id=370412420 instance=ExtResource("1_jfeu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.176847, -10.53816, 5.799016)
+
+[node name="Raycasts" type="Node3D" parent="." unique_id=401722987]
+
+[node name="DieRaycast1" parent="Raycasts" unique_id=812249734 instance=ExtResource("3_231m4")]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0.06296396, -2.1359406, 0)
