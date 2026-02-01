@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://db3tgvkgqlkbv"]
+
+[ext_resource type="Script" uid="uid://tneopj4igcfs" path="res://Scenes/settings.gd" id="1_lhmql"]
+[ext_resource type="Texture2D" uid="uid://ci70pdmi64b5l" path="res://Scenes/bg image.png" id="2_aaqfp"]
+[ext_resource type="FontFile" uid="uid://ij5ehtsjcvqp" path="res://Scenes/Dracutaz.ttf" id="3_j2dne"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kysc"]
+texture = ExtResource("2_aaqfp")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6vr2p"]
+
+[node name="Settings" type="Control" unique_id=956886696]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhmql")
+
+[node name="Panel" type="Panel" parent="." unique_id=1815784720]
+modulate = Color(0.45490196, 0.45490196, 0.45490196, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0010991305
+theme_override_styles/panel = SubResource("StyleBoxTexture_6kysc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=740679465]
+layout_mode = 0
+offset_left = 3.0000002
+offset_top = 94.0
+offset_right = 43.0
+offset_bottom = 134.0
+rotation = 0.0016673543
+scale = Vector2(0.44247246, 0.4558162)
+color = Color(0.66471463, 0.13034627, 0.023444874, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=771248572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=368358328]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=19207983]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_j2dne")
+theme_override_font_sizes/font_size = 40
+text = "
+Mute"
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=432476293]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+icon = SubResource("ViewportTexture_6vr2p")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1778322971]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_j2dne")
+theme_override_font_sizes/font_size = 40
+text = "
+
+Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1999966491]
+layout_mode = 2
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
