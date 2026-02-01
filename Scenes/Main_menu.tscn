@@ -18,7 +18,8 @@ modulate_color = Color(0.45646393, 0.456464, 0.456464, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_787fc"]
 
-[node name="MainMenu" type="Node2D" unique_id=749035458]
+[node name="MainMenu" type="Node2D" unique_id=1155185435]
+rotation = 0.0011420607
 script = ExtResource("1_f7j37")
 
 [node name="Panel" type="Panel" parent="." unique_id=1690332088]
