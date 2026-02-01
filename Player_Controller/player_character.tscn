@@ -1,12 +1,12 @@
-[gd_scene load_steps=94 format=4 uid="uid://oc13h3au02ro"]
+[gd_scene format=4 uid="uid://oc13h3au02ro"]
 
-[ext_resource type="Script" path="res://Player_Controller/scripts/Player_Character/player_character.gd" id="1_h0t42"]
-[ext_resource type="Script" path="res://Player_Controller/scripts/Player_Character/HUD.gd" id="2_tvwwj"]
+[ext_resource type="Script" uid="uid://cwi4yfuksfobp" path="res://Player_Controller/scripts/Player_Character/player_character.gd" id="1_h0t42"]
+[ext_resource type="Script" uid="uid://c2gdu3h5ricq4" path="res://Player_Controller/scripts/Player_Character/HUD.gd" id="2_tvwwj"]
 [ext_resource type="Texture2D" uid="uid://bjh5ic6qy4jtl" path="res://Player_Controller/HUD ASSETS/crosshair001.png" id="3_7f0mw"]
 [ext_resource type="Texture2D" uid="uid://uidicgaojgdi" path="res://Player_Controller/HUD ASSETS/crosshair046.png" id="4_l32wb"]
-[ext_resource type="Script" path="res://Player_Controller/scripts/Weapon_State_Machine/Weapon_State_Machine.gd" id="5_wuueu"]
+[ext_resource type="Script" uid="uid://ckhbgpevr2qqq" path="res://Player_Controller/scripts/Weapon_State_Machine/Weapon_State_Machine.gd" id="5_wuueu"]
 [ext_resource type="Resource" uid="uid://yc1f2j7pl4vr" path="res://Player_Controller/scripts/Weapon_State_Machine/Weapon_Resources/blasterI.tres" id="6_tpjp5"]
-[ext_resource type="Script" path="res://Player_Controller/scripts/Weapon_State_Machine/WeaponSlot.gd" id="6_wj0qi"]
+[ext_resource type="Script" uid="uid://d2ltu6105v6x0" path="res://Player_Controller/scripts/Weapon_State_Machine/WeaponSlot.gd" id="6_wj0qi"]
 [ext_resource type="AnimationLibrary" uid="uid://uybino34n0sj" path="res://Player_Controller/weapon_animation.res" id="13_lmhsg"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_rj3p7"]
@@ -1267,17 +1267,17 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ys4uk"]
 _data = {
-"RESET": SubResource("Animation_tvd50"),
-"blasterM_Deactive": SubResource("Animation_gqwbi"),
-"blasterM_Drop": SubResource("Animation_3ckq2"),
-"blasterM_Melee": SubResource("Animation_fjnab"),
-"blasterM_OOA": SubResource("Animation_pwqu6"),
-"blasterM_Reload": SubResource("Animation_sx31e"),
-"blasterM_Shoot": SubResource("Animation_3ky4l"),
-"blasterM_activate": SubResource("Animation_t03yb"),
-"blasterP_activate": SubResource("Animation_utruj"),
-"blasterP_deactivate": SubResource("Animation_7qiib"),
-"blasterP_strike": SubResource("Animation_w5ji1")
+&"RESET": SubResource("Animation_tvd50"),
+&"blasterM_Deactive": SubResource("Animation_gqwbi"),
+&"blasterM_Drop": SubResource("Animation_3ckq2"),
+&"blasterM_Melee": SubResource("Animation_fjnab"),
+&"blasterM_OOA": SubResource("Animation_pwqu6"),
+&"blasterM_Reload": SubResource("Animation_sx31e"),
+&"blasterM_Shoot": SubResource("Animation_3ky4l"),
+&"blasterM_activate": SubResource("Animation_t03yb"),
+&"blasterP_activate": SubResource("Animation_utruj"),
+&"blasterP_deactivate": SubResource("Animation_7qiib"),
+&"blasterP_strike": SubResource("Animation_w5ji1")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bn0g3"]
@@ -1987,15 +1987,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ity6x"]
 _data = {
-"RESET": SubResource("Animation_6o48i"),
-"crouch_air": SubResource("Animation_wh4u2"),
-"crouch_ground": SubResource("Animation_k4k07"),
-"crouch_reset": SubResource("Animation_6o8hu"),
-"lean_left": SubResource("Animation_v5xwa"),
-"lean_left_collision": SubResource("Animation_0c5qk"),
-"lean_reset": SubResource("Animation_5qee8"),
-"lean_right": SubResource("Animation_5n858"),
-"lean_right_collision": SubResource("Animation_2fwsm")
+&"RESET": SubResource("Animation_6o48i"),
+&"crouch_air": SubResource("Animation_wh4u2"),
+&"crouch_ground": SubResource("Animation_k4k07"),
+&"crouch_reset": SubResource("Animation_6o8hu"),
+&"lean_left": SubResource("Animation_v5xwa"),
+&"lean_left_collision": SubResource("Animation_0c5qk"),
+&"lean_reset": SubResource("Animation_5qee8"),
+&"lean_right": SubResource("Animation_5n858"),
+&"lean_right_collision": SubResource("Animation_2fwsm")
 }
 
 [sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_ryreg"]
@@ -2033,6 +2033,7 @@ animation = &"lean_right_collision"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_nrrb5"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5pepu"]
+nodes/output/position = Vector2(980, 260)
 nodes/Crouch_Blend/node = SubResource("AnimationNodeBlend3_ryreg")
 nodes/Crouch_Blend/position = Vector2(500, 140)
 nodes/air/node = SubResource("AnimationNodeAnimation_lnag4")
@@ -2057,15 +2058,14 @@ nodes/lean_right_collision/node = SubResource("AnimationNodeAnimation_rlexb")
 nodes/lean_right_collision/position = Vector2(40, 640)
 nodes/left_collision_blend/node = SubResource("AnimationNodeBlend2_otrul")
 nodes/left_collision_blend/position = Vector2(360, 820)
-nodes/output/position = Vector2(980, 260)
 nodes/right_collision_blend/node = SubResource("AnimationNodeBlend2_nrrb5")
 nodes/right_collision_blend/position = Vector2(394.107, 494.395)
-node_connections = [&"Crouch_Blend", 0, &"ground", &"Crouch_Blend", 1, &"crouch reset", &"Crouch_Blend", 2, &"air", &"lean", 0, &"Crouch_Blend", &"lean", 1, &"lean_blend", &"lean_blend", 0, &"right_collision_blend", &"lean_blend", 1, &"lean_reset", &"lean_blend", 2, &"left_collision_blend", &"left_collision_blend", 0, &"lean_left", &"left_collision_blend", 1, &"lean_left_collision", &"output", 0, &"lean", &"right_collision_blend", 0, &"lean_right", &"right_collision_blend", 1, &"lean_right_collision"]
+node_connections = [&"output", 0, &"lean", &"Crouch_Blend", 0, &"ground", &"Crouch_Blend", 1, &"crouch reset", &"Crouch_Blend", 2, &"air", &"lean", 0, &"Crouch_Blend", &"lean", 1, &"lean_blend", &"lean_blend", 0, &"right_collision_blend", &"lean_blend", 1, &"lean_reset", &"lean_blend", 2, &"left_collision_blend", &"left_collision_blend", 0, &"lean_left", &"left_collision_blend", 1, &"lean_left_collision", &"right_collision_blend", 0, &"lean_right", &"right_collision_blend", 1, &"lean_right_collision"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cx3sy"]
 radius = 0.45
 
-[node name="Player_Character" type="CharacterBody3D" node_paths=PackedStringArray("subviewport_camera", "main_camera", "animation_tree", "crouch_collision", "right_lean_collision", "left_lean_collision", "sprint_timer", "coyote_timer")]
+[node name="Player_Character" type="CharacterBody3D" unique_id=1675964857 node_paths=PackedStringArray("subviewport_camera", "main_camera", "animation_tree", "crouch_collision", "right_lean_collision", "left_lean_collision", "sprint_timer", "coyote_timer")]
 collision_layer = 2
 floor_max_angle = 0.872665
 script = ExtResource("1_h0t42")
@@ -2081,11 +2081,11 @@ acceleration = 20.0
 coyote_timer = NodePath("CoyoteTimer")
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=902563932]
 unique_name_in_owner = true
 script = ExtResource("2_tvwwj")
 
-[node name="Overlay" type="TextureRect" parent="CanvasLayer"]
+[node name="Overlay" type="TextureRect" parent="CanvasLayer" unique_id=1755099838]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -2096,42 +2096,42 @@ mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="debug_hud" type="VBoxContainer" parent="CanvasLayer"]
+[node name="debug_hud" type="VBoxContainer" parent="CanvasLayer" unique_id=1854164387]
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/debug_hud"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/debug_hud" unique_id=809311369]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer" unique_id=577010970]
 layout_mode = 2
 text = "Current Weapon: "
 
-[node name="CurrentWeapon" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer"]
+[node name="CurrentWeapon" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer" unique_id=1069563988]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/debug_hud"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/debug_hud" unique_id=1454571476]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer2"]
+[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer2" unique_id=1323635408]
 layout_mode = 2
 text = "Ammo:"
 
-[node name="CurrentAmmo" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer2"]
+[node name="CurrentAmmo" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer2" unique_id=694302533]
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/debug_hud"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/debug_hud" unique_id=1431229690]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer3"]
+[node name="Label" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer3" unique_id=1693806612]
 layout_mode = 2
 text = "Weapon Stack:"
 
-[node name="WeaponStack" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer3"]
+[node name="WeaponStack" type="Label" parent="CanvasLayer/debug_hud/HBoxContainer3" unique_id=1032227764]
 layout_mode = 2
 
-[node name="MainSight" type="TextureRect" parent="CanvasLayer"]
+[node name="MainSight" type="TextureRect" parent="CanvasLayer" unique_id=2112808141]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2141,7 +2141,7 @@ mouse_filter = 2
 texture = ExtResource("3_7f0mw")
 stretch_mode = 3
 
-[node name="HitSight" type="TextureRect" parent="CanvasLayer"]
+[node name="HitSight" type="TextureRect" parent="CanvasLayer" unique_id=408937326]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -2152,11 +2152,11 @@ mouse_filter = 2
 texture = ExtResource("4_l32wb")
 stretch_mode = 3
 
-[node name="HitSightTimer" type="Timer" parent="CanvasLayer/HitSight"]
+[node name="HitSightTimer" type="Timer" parent="CanvasLayer/HitSight" unique_id=2005522494]
 wait_time = 0.05
 one_shot = true
 
-[node name="SprintBar" type="HSlider" parent="CanvasLayer"]
+[node name="SprintBar" type="HSlider" parent="CanvasLayer" unique_id=838540729]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -2176,7 +2176,7 @@ value = 100.0
 editable = false
 scrollable = false
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=938288039]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2184,141 +2184,145 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=758168100]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=2061908256]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5451, 0)
 cull_mask = 524288
 
-[node name="Camera" type="Node3D" parent="."]
+[node name="Camera" type="Node3D" parent="." unique_id=594894494]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
 
-[node name="LeanPivot" type="Node3D" parent="Camera"]
+[node name="LeanPivot" type="Node3D" parent="Camera" unique_id=288205629]
 
-[node name="MainCamera" type="Camera3D" parent="Camera/LeanPivot"]
+[node name="MainCamera" type="Camera3D" parent="Camera/LeanPivot" unique_id=179114797]
 unique_name_in_owner = true
 cull_mask = 524287
 current = true
 
-[node name="Weapons_Manager" type="Node3D" parent="Camera/LeanPivot/MainCamera" node_paths=PackedStringArray("animation_player", "melee_hitbox")]
+[node name="Weapons_Manager" type="Node3D" parent="Camera/LeanPivot/MainCamera" unique_id=1658254160 node_paths=PackedStringArray("animation_player", "melee_hitbox")]
 script = ExtResource("5_wuueu")
 animation_player = NodePath("Weapons_Models/AnimationPlayer")
 melee_hitbox = NodePath("Melee_Hitbox")
 weapon_stack = Array[ExtResource("6_wj0qi")]([SubResource("Resource_4pcyg")])
 
-[node name="Weapons_Models" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager"]
+[node name="Weapons_Models" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager" unique_id=245297798]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.54919, 0)
 
-[node name="blasterN" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
-transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0.193, 1.255, -0.643)
+[node name="blasterN" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=1860595904]
+transform = Transform3D(-1, 0, 2.5351817e-06, 0, 1, 0, -2.5351817e-06, 0, -1, 0.193, 1.255, -0.643)
 visible = false
 
-[node name="blasterN2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterN"]
+[node name="blasterN2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterN" unique_id=879271478]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.15)
 layers = 524288
 mesh = SubResource("ArrayMesh_4dame")
 skeleton = NodePath("")
 
-[node name="blasterI" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
-transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, -0.148, 1.379, -0.398)
+[node name="blasterI" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=580414889]
+transform = Transform3D(-1, 0, -2.5351817e-06, 0, 1, 0, 2.5351817e-06, 0, -1, -0.148, 1.379, -0.398)
 visible = false
 
-[node name="blasterD2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterI"]
+[node name="blasterD2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterI" unique_id=1857570813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.15)
 layers = 524288
 mesh = SubResource("ArrayMesh_eo1ub")
 skeleton = NodePath("")
 
-[node name="blasterL" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
-transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0.117, 1.16, -0.512)
+[node name="blasterL" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=43871292]
+transform = Transform3D(-1, 0, -2.5351817e-06, 0, 1, 0, 2.5351817e-06, 0, -1, 0.117, 1.16, -0.512)
 visible = false
 
-[node name="blasterA2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterL"]
+[node name="blasterA2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterL" unique_id=1020135099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.15)
 layers = 524288
 mesh = SubResource("ArrayMesh_33sn6")
 skeleton = NodePath("")
 
-[node name="blasterM" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
+[node name="blasterM" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=717449764]
 visible = false
 
-[node name="blasterM2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterM"]
+[node name="blasterM2" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterM" unique_id=2024748926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.15)
 layers = 524288
 mesh = SubResource("ArrayMesh_kn6m3")
 skeleton = NodePath("")
 
-[node name="blasterP2" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
-transform = Transform3D(-0.97237, -0.233408, -0.00407487, 0, 0.0174555, -0.999848, 0.233443, -0.972222, -0.0169732, 0.32, 1.014, -0.35)
+[node name="blasterP2" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=759413662]
+transform = Transform3D(-0.97236997, -0.2334076, -0.0040748655, 0, 0.01745548, -0.999848, 0.23344313, -0.9722221, -0.016973201, 0.32, 1.014, -0.35)
 visible = false
 
-[node name="blasterP" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterP2"]
+[node name="blasterP" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterP2" unique_id=16802495]
 mesh = SubResource("ArrayMesh_xefgr")
 skeleton = NodePath("")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=2117678308]
 unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_ys4uk"),
-"Global": ExtResource("13_lmhsg")
-}
+libraries/ = SubResource("AnimationLibrary_ys4uk")
+libraries/Global = ExtResource("13_lmhsg")
 
-[node name="blasterQ2" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models"]
-transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0, 0, 0)
+[node name="blasterQ2" type="Node3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" unique_id=1971576606]
+transform = Transform3D(-1, 0, 2.5351817e-06, 0, 1, 0, -2.5351817e-06, 0, -1, 0, 0, 0)
 visible = false
 
-[node name="blasterQ" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterQ2"]
+[node name="blasterQ" type="MeshInstance3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models/blasterQ2" unique_id=157837841]
 mesh = SubResource("ArrayMesh_8tvdw")
 skeleton = NodePath("")
 
-[node name="BulletPoint" type="Marker3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager"]
+[node name="BulletPoint" type="Marker3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager" unique_id=2102209270]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.266143, -0.288234, -0.779217)
 gizmo_extents = 0.21
 
-[node name="Melee_Hitbox" type="ShapeCast3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager"]
+[node name="Melee_Hitbox" type="ShapeCast3D" parent="Camera/LeanPivot/MainCamera/Weapons_Manager" unique_id=330621245]
 shape = SubResource("BoxShape3D_to3sp")
 target_position = Vector3(0, 0, -0.7)
 collision_mask = 36
 debug_shape_custom_color = Color(0, 1, 0, 1)
 
-[node name="LeanLeftCollision" type="ShapeCast3D" parent="Camera"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera/LeanPivot/MainCamera" unique_id=44243306]
+transform = Transform3D(1, 0, 0, 0, 0.8958592, -0.4443381, 0, 0.4443381, 0.8958592, 0, -1.0144908, -1.2905617)
+light_color = Color(1, 0.8901961, 0.78039217, 1)
+light_energy = 10.0
+shadow_enabled = true
+shadow_bias = 0.05
+spot_range = 10.0
+
+[node name="LeanLeftCollision" type="ShapeCast3D" parent="Camera" unique_id=168627118]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 shape = SubResource("SphereShape3D_24b8y")
 target_position = Vector3(-0.85, 0, 0)
 collision_mask = 5
 debug_shape_custom_color = Color(0, 0, 1, 1)
 
-[node name="LeanRighCollision" type="ShapeCast3D" parent="Camera"]
+[node name="LeanRighCollision" type="ShapeCast3D" parent="Camera" unique_id=206601462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 shape = SubResource("SphereShape3D_24b8y")
 target_position = Vector3(0.85, 0, 0)
 collision_mask = 5
 debug_shape_custom_color = Color(0, 0, 1, 1)
 
-[node name="BodyCollision" type="CollisionShape3D" parent="."]
+[node name="BodyCollision" type="CollisionShape3D" parent="." unique_id=580716658]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_73v4a")
 
-[node name="PickUpDetection" type="Area3D" parent="."]
+[node name="PickUpDetection" type="Area3D" parent="." unique_id=774995558]
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PickUpDetection"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickUpDetection" unique_id=2025183352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015625, 0.271729, 0.085144)
 shape = SubResource("BoxShape3D_mvomp")
 
-[node name="CharacterAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ity6x")
-}
+[node name="CharacterAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1409431537]
+libraries/ = SubResource("AnimationLibrary_ity6x")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1605820876]
 tree_root = SubResource("AnimationNodeBlendTree_5pepu")
 anim_player = NodePath("../CharacterAnimationPlayer")
 parameters/Crouch_Blend/blend_amount = 0.0
@@ -2327,16 +2331,16 @@ parameters/lean_blend/blend_amount = 0.0
 parameters/left_collision_blend/blend_amount = 0.0
 parameters/right_collision_blend/blend_amount = 0.0
 
-[node name="CrouchCollider" type="ShapeCast3D" parent="."]
+[node name="CrouchCollider" type="ShapeCast3D" parent="." unique_id=1177100113]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("SphereShape3D_cx3sy")
 target_position = Vector3(0, 0.4, 0)
 
-[node name="SprintTimer" type="Timer" parent="."]
+[node name="SprintTimer" type="Timer" parent="." unique_id=706782683]
 wait_time = 2.0
 one_shot = true
 
-[node name="CoyoteTimer" type="Timer" parent="."]
+[node name="CoyoteTimer" type="Timer" parent="." unique_id=1751928300]
 
 [connection signal="timeout" from="CanvasLayer/HitSight/HitSightTimer" to="CanvasLayer" method="_on_hit_sight_timer_timeout"]
 [connection signal="add_signal_to_hud" from="Camera/LeanPivot/MainCamera/Weapons_Manager" to="CanvasLayer" method="_on_weapons_manager_add_signal_to_hud"]
